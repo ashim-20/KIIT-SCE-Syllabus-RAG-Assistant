@@ -1,0 +1,43 @@
+# --- Security (CRITICAL) ---
+# Never push API keys to GitHub
+.env
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+rag/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Database (Local Artifacts) ---
+# Ignore the local vector database so it doesn't bloat the repo
+chroma_db/
+db_storage/
+
+# --- IDE Settings ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+# --- Generated Archives ---
+*.zip
+kiit_syllabus_rag.zip
+
+# --- Data (Optional) ---
+# Uncomment the line below if you do NOT want to push the PDF to GitHub
+# data/*.pdf

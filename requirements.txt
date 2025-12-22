@@ -1,0 +1,9 @@
+chromadb
+langchain
+langchain-community
+langchain-groq
+numpy
+pypdf
+PyPDF2
+python-dotenv
+sentence-transformers
