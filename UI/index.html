@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIIT Assistant - Academic Counselor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-left">
+                <div class="avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <h1 class="title">KIIT Assistant</h1>
+                    <p class="subtitle">Academic Counselor</p>
+                </div>
+            </div>
+            <button class="btn-refresh" id="refreshBtn" title="Reset conversation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36M20.49 15a9 9 0 0 1-14.85 3.36"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-container" id="chatContainer">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <div class="book-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <h2 class="welcome-title">Hello! I'm your KIIT Academic Counselor</h2>
+                <p class="welcome-text">I can help with syllabus queries, regulations, and subject information.</p>
+            </div>
+
+            <!-- Messages will be inserted here -->
+        </main>
+
+        <!-- Quick Action Buttons -->
+        <div class="quick-actions">
+            <button class="quick-btn" data-action="exam-schedule">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Exam Schedule
+            </button>
+            <button class="quick-btn" data-action="syllabus">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="12" y1="11" x2="12" y2="17"></line>
+                    <line x1="9" y1="14" x2="15" y2="14"></line>
+                </svg>
+                CSE Syllabus
+            </button>
+            <button class="quick-btn" data-action="faculty">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Faculty Info
+            </button>
+            <button class="quick-btn" data-action="regulations">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l9.08 5.24v9.52A9 9 0 0 1 12 22a9 9 0 0 1-9.08-5.24V7.24L12 2z"></path>
+                    <polyline points="12 12 16 8 12 4 8 8"></polyline>
+                </svg>
+                Regulations
+            </button>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <textarea 
+                    id="userInput" 
+                    class="input-textarea" 
+                    placeholder="Ask about syllabus, subjects..."
+                    rows="2"
+                ></textarea>
+                <button class="btn-send" id="sendBtn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.40,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16865566 C3.34915502,0.9115582 2.40734225,1.0216722 1.77946707,1.4929644 C0.994623095,2.12126774 0.837654326,3.21063368 1.15159189,3.99612062 L3.03521743,10.4371136 C3.03521743,10.5942110 3.34915502,10.7513084 3.50612381,10.7513084 L16.6915026,11.5367952 C16.6915026,11.5367952 17.1624089,11.5367952 17.1624089,12.0080873 C17.1624089,12.4793795 16.6915026,12.4744748 16.6915026,12.4744748 Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
